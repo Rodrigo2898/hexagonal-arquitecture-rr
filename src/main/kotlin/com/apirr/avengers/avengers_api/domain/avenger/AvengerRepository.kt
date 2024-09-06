@@ -1,11 +1,7 @@
 package com.apirr.avengers.avengers_api.domain.avenger
 
-import org.springframework.data.jpa.repository.JpaRepository
-import org.springframework.stereotype.Repository
-
-@Repository
-interface AvengerRepository : JpaRepository<Avenger, Long> {
-    fun getDetail(id: Long): Avenger;
+interface AvengerRepository {
+    fun getDetail(id: Long): Avenger?;
 
     fun getAvengers(): List<Avenger>;
 
