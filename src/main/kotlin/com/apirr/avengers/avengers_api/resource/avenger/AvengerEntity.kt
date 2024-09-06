@@ -4,6 +4,7 @@ import com.apirr.avengers.avengers_api.domain.avenger.Avenger
 import jakarta.persistence.*
 
 @Entity
+@Table(name = "tb_avenger")
 data class AvengerEntity(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

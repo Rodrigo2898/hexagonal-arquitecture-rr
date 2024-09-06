@@ -12,7 +12,7 @@ import java.net.URI
 private const val API_PATH = "/api/v1/avengers";
 
 @RestController
-@RequestMapping(API_PATH)
+@RequestMapping("api/v1/avengers")
 class AvengerResource(
     @Autowired private val repository: AvengerRepository,
 ) {
