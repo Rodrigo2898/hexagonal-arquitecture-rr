@@ -16,7 +16,6 @@ private const val API_PATH = "/api/v1/avengers";
 class AvengerResource(
     @Autowired private val repository: AvengerRepository,
 ) {
-
     @GetMapping
     fun getAvengers(): ResponseEntity<List<AvengerResponse>> =
         repository.getAvengers()
@@ -25,8 +24,7 @@ class AvengerResource(
                 ResponseEntity.ok().body(it);
             };
 
-
-    @GetMapping("{id}")
+    @GetMapping("{id}/detail")
     fun getAvengerDetail(@PathVariable("id") id: Long) =
         repository.getDetail(id)?.let {
             ResponseEntity.ok().body(AvengerResponse.from(it));
